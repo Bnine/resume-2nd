@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
 
 
 /*
@@ -35,6 +36,7 @@ Route::group([
     'prefix' => 'v1/profile'
 ], function () {
     Route::get('/', [ProfileController::class, 'index']);
+    Route::get('/projects', [ProjectController::class, 'index']);
 });
 
 /*

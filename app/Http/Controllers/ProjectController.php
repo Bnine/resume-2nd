@@ -2,31 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Dto\UserProfile\UserProfileDto;
+use App\Dto\UserProject\UserProjectDto;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Helpers\Requests\Headers\AcceptLanguage;
-use App\Services\UserProfile\UserProfileService;
+use App\Services\UserProject\UserProjectService;
 use Illuminate\Support\Facades\Log;
 use \Exception;
 
-class ProfileController extends Controller
+class ProjectController extends Controller
 {
     public function __construct()
     {
 
     }
 
-    public function index(UserProfileService $userProfileService, Request $request)
+    public function index(UserProjectService $userProjectService, Request $request)
     {   
         try {
             $acceptLanguage = new AcceptLanguage($request->header('Accept-Language', 'ko'));
 
-            $dto = new UserProfileDto(auth()->id(), $acceptLanguage->getAcceptedLanguage());
+            $dto = new UserProjectDto(auth()->id(), $acceptLanguage->getAcceptedLanguage());
 
             return response()->json([
                 'status' => 'successful',
-                'data' => $userProfileService->getUserProfileData($dto),
+                'data' => $userProjectService->getUserProjectData($dto),
             ]);
         } catch (Exception $e) {
             Log::error('Exception occurred : '.json_encode($e->getMessage()));

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -35,6 +34,16 @@ class User extends Authenticatable implements JWTSubject
     public function userProfile()
     {
         return $this->hasOne(UserProfile::class);
+    }
+
+    public function userProject()
+    {
+        return $this->hasMany(UserProject::class);
+    }
+
+    public function projectImage()
+    {
+        return $this->hasMany(ProjectImage::class);
     }
 
     /**

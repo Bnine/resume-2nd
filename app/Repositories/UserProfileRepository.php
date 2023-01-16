@@ -4,16 +4,11 @@ namespace App\Repositories;
 use App\Repositories\Interfaces\UserProfileRepositoryInterface;
 use App\Models\UserProfile;
 
-class UserProfileRepository extends BaseRepository implements UserProfileRepositoryInterface
+class UserProfileRepository implements UserProfileRepositoryInterface
 {
-    /**
-     * UserProfileRepository constructor.
-     *
-     * @param UserProfile $model
-     */
-    public function __construct(UserProfile $model)
+    public function __construct()
     {
-        parent::__construct($model);
+
     }
 
     /**
@@ -23,6 +18,6 @@ class UserProfileRepository extends BaseRepository implements UserProfileReposit
      */
     public function findUserProfile(int $id): object
     {
-        return $this->model->find($id);
+        return UserProfile::find($id);
     }
 }
