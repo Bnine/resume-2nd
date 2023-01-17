@@ -39,7 +39,8 @@ class UserProfileService
                 $data->university_ko,
                 $data->comment_ko,
                 $data->birth,
-                $data->profile_photo
+                $data->profile_photo,
+                $data->email
             );
         } elseif ($acceptedLanguage === $this->isEn) {
             $returnData = $this->responseStructrue(
@@ -47,7 +48,8 @@ class UserProfileService
                 $data->university_en,
                 $data->comment_en,
                 $data->birth,
-                $data->profile_photo
+                $data->profile_photo,
+                $data->email
             );
         } elseif ($acceptedLanguage === $this->isJp) {
             $returnData = $this->responseStructrue(
@@ -55,7 +57,8 @@ class UserProfileService
                 $data->university_jp,
                 $data->comment_jp,
                 $data->birth,
-                $data->profile_photo
+                $data->profile_photo,
+                $data->email
             );
         } else {
             $returnData = $this->responseStructrue(
@@ -63,7 +66,8 @@ class UserProfileService
                 $data->university_ko,
                 $data->comment_ko,
                 $data->birth,
-                $data->profile_photo
+                $data->profile_photo,
+                $data->email
             );
         } 
 
@@ -75,7 +79,8 @@ class UserProfileService
         string $university,
         string $comment,
         string $birth,
-        string $profilePhoto
+        string $profilePhoto,
+        string $email
     ): array {
         return array(
             'name' => $name,
@@ -83,6 +88,7 @@ class UserProfileService
             'comment' => $comment,
             'birth' => $birth,
             'profilePhoto' => config('images.host').$profilePhoto,
+            'email' => $email
         );
     }
 }
