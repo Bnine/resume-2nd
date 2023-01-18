@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ContactController;
 
 
 /*
@@ -37,6 +38,13 @@ Route::group([
 ], function () {
     Route::get('/', [ProfileController::class, 'index']);
     Route::get('/projects', [ProjectController::class, 'index']);
+});
+
+Route::group([
+    'middleware' => 'verifyjwt.mid',
+    'prefix' => 'v1/contact'
+], function () {
+    Route::post('/sending-email', [ContactController::class, 'sendEmail']);
 });
 
 /*

@@ -109,21 +109,25 @@ class UserProjectService
         foreach ($this->userProjectRepository->getUserProjectDetails($userProjectId) as $val) {
             if ($acceptedLanguage === $this->isKo) {
                 $returnData[] = $this->responseProjectDetailStructrue(
+                    $val->id,
                     $val->project_name_ko,
                     $val->project_detail_ko
                 );
             } elseif ($acceptedLanguage === $this->isEn) {
                 $returnData[] = $this->responseProjectDetailStructrue(
+                    $val->id,
                     $val->project_name_en,
                     $val->project_detail_en
                 );
             } elseif ($acceptedLanguage === $this->isJp) {
                 $returnData[] = $this->responseProjectDetailStructrue(
+                    $val->id,
                     $val->project_name_jp,
                     $val->project_detail_jp
                 );
             } else {
                 $returnData[] = $this->responseProjectDetailStructrue(
+                    $val->id,
                     $val->project_name_ko,
                     $val->project_detail_ko
                 );
@@ -146,10 +150,12 @@ class UserProjectService
     }
 
     private function responseProjectDetailStructrue(
+        int $projectId,
         string $projectName,
         string $projectDetail
     ): array {
         return array(
+            'projectId' => $projectId,
             'projectName' => $projectName,
             'projectDetail' => $projectDetail,
         );

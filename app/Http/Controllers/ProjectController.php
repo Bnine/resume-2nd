@@ -33,7 +33,7 @@ class ProjectController extends Controller
             return response()->json([
                 'status' => 'failure',
                 'msg' => 'service available',
-            ], Response::HTTP_BAD_REQUEST);
+            ], Response::HTTP_SERVICE_UNAVAILABLE);
         }
     }
 }

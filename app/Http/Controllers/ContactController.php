@@ -2,37 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use App\Dto\UserProfile\UserProfileDto;
+use \Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Helpers\Requests\Headers\AcceptLanguage;
-use App\Services\UserProfile\UserProfileService;
 use Illuminate\Support\Facades\Log;
-use \Exception;
+use App\Http\Requests\SendmailPostRequest;
+use App\Helpers\Requests\Headers\AcceptLanguage;
+use App\Services\Contact\SendingEmailService;
+use App\Dto\Contact\SendingEmailDto;
 
-class ProfileController extends Controller
+class ContactController extends Controller
 {
     public function __construct()
     {
 
     }
 
-    public function index(UserProfileService $userProfileService, Request $request)
+    public function sendEmail(SendingEmailService $sendingEmailService, SendmailPostRequest $request)
     {   
         try {
             $acceptLanguage = new AcceptLanguage($request->header('Accept-Language', 'ko'));
 
-            $dto = new UserProfileDto(auth()->id(), $acceptLanguage->getAcceptedLanguage());
+            $request->validated();
+
+            $dto = new SendingEmailDto($request->emailAddress, $request->subject, $request->name, $request->content);
+
+            $sendingEmailService->send($dto);
 
             return response()->json([
                 'status' => 'successful',
-                'data' => $userProfileService->getUserProfileData($dto),
             ]);
         } catch (Exception $e) {
             Log::error('Exception occurred : '.json_encode($e->getMessage()));
             return response()->json([
                 'status' => 'failure',
-                'msg' => 'service available',
+                'message' => 'service available',
             ], Response::HTTP_SERVICE_UNAVAILABLE);
         }
     }
