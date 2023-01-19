@@ -12,11 +12,6 @@ class UserProjectService
     private $isEn = 'en';
     private $isJp = 'jp';
 
-    /**
-     * UserProfileService constructor.
-     *
-     * @param MainRepositoryInterface $mainRepository
-     */
     public function __construct(UserProjectRepositoryInterface $userProjectRepository)
     {
         $this->userProjectRepository = $userProjectRepository;
@@ -113,6 +108,7 @@ class UserProjectService
                     $val->project_name_ko,
                     $val->project_detail_ko
                 );
+            /*
             } elseif ($acceptedLanguage === $this->isEn) {
                 $returnData[] = $this->responseProjectDetailStructrue(
                     $val->id,
@@ -125,6 +121,7 @@ class UserProjectService
                     $val->project_name_jp,
                     $val->project_detail_jp
                 );
+            */
             } else {
                 $returnData[] = $this->responseProjectDetailStructrue(
                     $val->id,

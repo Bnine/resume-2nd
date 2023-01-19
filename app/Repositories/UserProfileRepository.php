@@ -11,11 +11,6 @@ class UserProfileRepository implements UserProfileRepositoryInterface
 
     }
 
-    /**
-     * @param int $id member id
-     *
-     * @return array
-     */
     public function findUserProfile(int $id): object
     {
         return UserProfile::find($id);

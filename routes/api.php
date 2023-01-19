@@ -25,15 +25,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 */
 
 Route::group([
-        'prefix' => 'v1/auth'
-    ], function () {
-        Route::post('login', [AuthController::class, 'login']);
-        Route::get('logout', [AuthController::class, 'logout'])->middleware('verifyjwt.mid');
-        Route::get('me', [AuthController::class, 'me'])->middleware('verifyjwt.mid');
+    'prefix' => 'v1/auth'
+], function () {
+    Route::post('login', [AuthController::class, 'login']);
+    Route::get('logout', [AuthController::class, 'logout'])->middleware('verifyjwt.mid');
+    Route::get('me', [AuthController::class, 'me'])->middleware('verifyjwt.mid');
 });
 
 Route::group([
-    'middleware' => 'verifyjwt.mid',
+    'middleware' => ['verifyjwt.mid', 'setLocale'],
     'prefix' => 'v1/profile'
 ], function () {
     Route::get('/', [ProfileController::class, 'index']);
@@ -41,30 +41,8 @@ Route::group([
 });
 
 Route::group([
-    'middleware' => 'verifyjwt.mid',
+    'middleware' => ['verifyjwt.mid', 'setLocale'],
     'prefix' => 'v1/contact'
 ], function () {
     Route::post('/sending-email', [ContactController::class, 'sendEmail']);
 });
-
-/*
-Route::group([
-        'middleware' => 'api',
-        'prefix' => 'auth'
-    ], function ($router) {
-        Route::post('login', [AuthController::class, 'login']);
-        Route::post('logout', [AuthController::class, 'logout']);
-        Route::post('me', [AuthController::class, 'me']);
-});
-*/
-
-/*
-Route::group([
-        'middleware' => 'verifyjwt.mid',
-        'prefix' => 'auth'
-    ], function ($router) {
-        Route::post('login', [AuthController::class, 'login']);
-        Route::post('logout', [AuthController::class, 'logout']);
-        Route::post('me', [AuthController::class, 'me']);
-});
-*/

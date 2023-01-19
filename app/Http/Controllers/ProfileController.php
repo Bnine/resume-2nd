@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Lang;
 use App\Dto\UserProfile\UserProfileDto;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Helpers\Requests\Headers\AcceptLanguage;
 use App\Services\UserProfile\UserProfileService;
 use Illuminate\Support\Facades\Log;
 use \Exception;
@@ -17,12 +17,10 @@ class ProfileController extends Controller
 
     }
 
-    public function index(UserProfileService $userProfileService, Request $request)
+    public function index(UserProfileService $userProfileService)
     {   
         try {
-            $acceptLanguage = new AcceptLanguage($request->header('Accept-Language', 'ko'));
-
-            $dto = new UserProfileDto(auth()->id(), $acceptLanguage->getAcceptedLanguage());
+            $dto = new UserProfileDto(auth()->id(), Lang::getLocale());
 
             return response()->json([
                 'status' => 'successful',

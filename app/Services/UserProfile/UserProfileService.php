@@ -12,11 +12,6 @@ class UserProfileService
     private $isEn = 'en';
     private $isJp = 'jp';
 
-    /**
-     * UserProfileService constructor.
-     *
-     * @param MainRepositoryInterface $mainRepository
-     */
     public function __construct(UserProfileRepositoryInterface $userProfileRepository)
     {
         $this->userProfileRepository = $userProfileRepository;
