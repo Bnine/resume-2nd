@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use JWTAuth;
 use Exception;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
@@ -23,13 +24,23 @@ class JwtMiddleware extends BaseMiddleware
             $user = JWTAuth::parseToken()->authenticate();
         } catch (Exception $e) {
             if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenInvalidException) {
-                return response()->json(['status' => 'Token is Invalid!'], 403);
+                return response()->json([
+                    'status' => 'failure',
+                    'message' => 'JWT Token is Invalid!',
+                    'data' => null
+                ], Response::HTTP_FORBIDDEN);
             } else if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenExpiredException) {
-                return response()->json(['status' => 'Token is Expired!'], 401);
-            } else if ($e instanceof \Tymon\JWTAuth\Exceptions\TokenBlacklistedException) {
-                return response()->json(['status' => 'Token is Blacklisted!'], 400);
+                return response()->json([
+                    'status' => 'failure',
+                    'message' => 'JWT Token is Expired!',
+                    'data' => null
+                ], Response::HTTP_FORBIDDEN);
             } else {
-                return response()->json(['status' => 'Authorization Token is not found!'], 404);
+                return response()->json([
+                    'status' => 'failure',
+                    'message' => 'JWT Token is not found!',
+                    'data' => null
+                ], Response::HTTP_FORBIDDEN);
             }
         }
  

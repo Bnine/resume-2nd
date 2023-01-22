@@ -135,7 +135,7 @@ class UserProjectService
     }
 
     private function responseSkillsStructrue(
-        string $imageId,
+        int $imageId,
         string $imageName,
         string $imagePath
     ): array {

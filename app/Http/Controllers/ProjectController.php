@@ -23,13 +23,15 @@ class ProjectController extends Controller
 
             return response()->json([
                 'status' => 'successful',
+                'message' => 'your request was successful',
                 'data' => $userProjectService->getUserProjectData($dto),
             ]);
         } catch (Exception $e) {
             Log::error('Exception occurred : ' . json_encode($e->getMessage()));
             return response()->json([
                 'status' => 'failure',
-                'msg' => 'service available',
+                'message' => 'service available',
+                'data' => null
             ], Response::HTTP_SERVICE_UNAVAILABLE);
         }
     }
