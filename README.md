@@ -1,7 +1,7 @@
 # Bongkyu Kim's Resume API Document
 ## 1.Summary🇰🇷
 > 기본적인 프로필과 진행한 프로젝트에 대한 내용을 담고 있습니다.  
-> https://resume.bnine.site
+> https://resume.bnine.site   
 > 해당 사이트에서 구현된 내용을 확인 하실수 있습니다.  
 > Front-end는 React로 구현 하였으며 Back-end는 PHP와 laravel Framework로 구현 하였습니다.    
 > 각 API의 자세한 사항은 아래의 SwaggerHub의 문서에서 확인이 가능합니다.  
@@ -14,14 +14,14 @@
 4. postman이나 기타 Tool을 사용하여 직접 API를 요청시 다음의 토큰을 사용해주세요.
 5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
 ```
-## 1.Summary
-> Included Basic Profile and Project details.
-> https://resume.bnine.site
-> You can check detail above URL.
-> Front-end is developed by React, Back-end is developed by PHP with Laravel Framework.
-> You can check API's detail on swaggerHub below.
-> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0
-## 1.1. Notice for API
+## 1.Summary🇺🇸
+> Included Basic Profile and Project details.   
+> https://resume.bnine.site   
+> You can check detail above URL.   
+> Front-end is developed by React, Back-end is developed by PHP with Laravel Framework.   
+> You can check API's detail on swaggerHub below.   
+> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+## 1.1. Notice for API🇺🇸
 ```
 1. Every API must need JWT token When requests API.
 2. Using 'Accept-Language: {language}' in Request Header for Multiple Languages.
@@ -29,14 +29,14 @@
 4. If you want to test with postman or others, please use JWT token below
 5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
 ```
-## 1.Summary🇰🇷
-> 基本的なプロフィールと進行したプロジェクトに関する内容が含まれています。 
-> https://resume.bnine.site
-> 上記URLより詳細をご確認いただけます。
-> Front-endはReactで開発しています。Back-endはPHPとLaravel Frameworkで開発しています。
-> 下のswaggerHubでAPIの詳細を確認できます。  
-> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0
-## 1.1. Notice for API🇰🇷
+## 1.Summary🇯🇵
+> 基本的なプロフィールと進行したプロジェクトに関する内容が含まれています。   
+> https://resume.bnine.site   
+> 上記URLより詳細をご確認いただけます。   
+> Front-endはReactで開発しています。Back-endはPHPとLaravel Frameworkで開発しています。   
+> 下のswaggerHubでAPIの詳細を確認できます。   
+> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+## 1.1. Notice for API🇯🇵
 ```
 1. すべてのAPIには、APIを要求するときにJWTトークンが必要です。
 2. Request Headerの'Accept-Language: {language}'で多言語Responseを開発しました。
