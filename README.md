@@ -5,7 +5,9 @@
 > 해당 사이트에서 구현된 내용을 확인 하실수 있습니다.  
 > Front-end는 React로 구현 하였으며 Back-end는 PHP와 laravel Framework로 구현 하였습니다.    
 > 각 API의 자세한 사항은 아래의 SwaggerHub의 문서에서 확인이 가능합니다.  
-> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0
+> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+> Front-end(ReactJS) github repository   
+> https://github.com/Bnine/resume-react   
 ## 1.1. Notice for API🇰🇷
 ```
 1. 모든 API는 무분별한 호출을 막기 위해 JWT 토큰이 필요합니다.
@@ -21,6 +23,8 @@
 > Front-end is developed by React, Back-end is developed by PHP with Laravel Framework.   
 > You can check API's detail on swaggerHub below.   
 > https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+> Front-end(ReactJS) github repository   
+> https://github.com/Bnine/resume-react   
 ## 1.1. Notice for API🇺🇸
 ```
 1. Every API must need JWT token When requests API.
@@ -36,6 +40,8 @@
 > Front-endはReactで開発しています。Back-endはPHPとLaravel Frameworkで開発しています。   
 > 下のswaggerHubでAPIの詳細を確認できます。   
 > https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+> Front-end(ReactJS) github repository   
+> https://github.com/Bnine/resume-react   
 ## 1.1. Notice for API🇯🇵
 ```
 1. すべてのAPIには、APIを要求するときにJWTトークンが必要です。
