@@ -16,23 +16,6 @@
 4. postman이나 기타 Tool을 사용하여 직접 API를 요청시 다음의 토큰을 사용해주세요.
 5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
 ```
-## 1.Summary🇺🇸
-> Included Basic Profile and Project details.   
-> https://resume.bnine.site   
-> You can check detail above URL.   
-> Front-end is developed by React, Back-end is developed by PHP with Laravel Framework.   
-> You can check API's detail on swaggerHub below.   
-> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
-> Front-end(ReactJS) github repository   
-> https://github.com/Bnine/resume-react   
-## 1.1. Notice for API🇺🇸
-```
-1. Every API must need JWT token When requests API.
-2. Using 'Accept-Language: {language}' in Request Header for Multiple Languages.
-3. Available languages are ko, en, jp. as KOREAN, ENGLISH, JAPANESE.
-4. If you want to test with postman or others, please use JWT token below
-5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
-```
 ## 1.Summary🇯🇵
 > 基本的なプロフィールと進行したプロジェクトに関する内容が含まれています。   
 > https://resume.bnine.site   
@@ -48,6 +31,23 @@
 2. Request Headerの'Accept-Language: {language}'で多言語Responseを開発しました。
 3. 使用可能な言語はko、en、jpで、左から韓国語、英語、日本語順番です。
 4. postmanや他のToolを使用してテストをする時は下のJWTトークンを使用してください。
+5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
+```
+## 1.Summary🇺🇸
+> Included Basic Profile and Project details.   
+> https://resume.bnine.site   
+> You can check detail above URL.   
+> Front-end is developed by React, Back-end is developed by PHP with Laravel Framework.   
+> You can check API's detail on swaggerHub below.   
+> https://app.swaggerhub.com/apis-docs/Bnine/bnine-resume-api/1.0.0   
+> Front-end(ReactJS) github repository   
+> https://github.com/Bnine/resume-react   
+## 1.1. Notice for API🇺🇸
+```
+1. Every API must need JWT token When requests API.
+2. Using 'Accept-Language: {language}' in Request Header for Multiple Languages.
+3. Available languages are ko, en, jp. as KOREAN, ENGLISH, JAPANESE.
+4. If you want to test with postman or others, please use JWT token below
 5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
 ```
 ## 2. Server Configuration

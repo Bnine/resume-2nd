@@ -108,7 +108,6 @@ class UserProjectService
                     $val->project_name_ko,
                     $val->project_detail_ko
                 );
-            /*
             } elseif ($acceptedLanguage === $this->isEn) {
                 $returnData[] = $this->responseProjectDetailStructrue(
                     $val->id,
@@ -121,7 +120,6 @@ class UserProjectService
                     $val->project_name_jp,
                     $val->project_detail_jp
                 );
-            */
             } else {
                 $returnData[] = $this->responseProjectDetailStructrue(
                     $val->id,
