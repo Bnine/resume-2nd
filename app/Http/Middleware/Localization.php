@@ -13,7 +13,7 @@ class Localization
     private $allowedLanguages = ['ko', 'en', 'jp'];
     private $defaultAcceptedLanguage = 'ko';
 
-    public function __construct(Request $request)
+    public function handle(Request $request, Closure $next)
     {
         $this->acceptedLanguage = strtolower($request->header('Accept-Language', 'ko'));
         if (in_array($this->acceptedLanguage, $this->allowedLanguages)) {
@@ -21,11 +21,7 @@ class Localization
         } else {
             Lang::setLocale($this->defaultAcceptedLanguage);
         }
-        Log::debug(__METHOD__.'lang - getLocale : '.Lang::getLocale());
-    }
-
-    public function handle(Request $request, Closure $next)
-    {
+        Log::debug(__METHOD__.' Accept-Language -> '.$request->header('Accept-Language', 'ko').' & lang - getLocale -> '.Lang::getLocale());
         return $next($request);
     }
 

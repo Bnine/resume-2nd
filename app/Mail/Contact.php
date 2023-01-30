@@ -31,7 +31,7 @@ class Contact extends Mailable
         $this->subject = $subject;
         $this->name = $name;
         $this->content = $content;
-        Log::error('emailAddress : '.json_encode($this->emailAddress));
+        Log::debug(__METHOD__.' emailAddress -> '.$this->emailAddress);
     }
 
     /**
