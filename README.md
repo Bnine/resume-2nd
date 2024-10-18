@@ -51,9 +51,9 @@
 5. Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTY3MjkzNjkwMSwibmJmIjoxNjcyOTM2OTAxLCJqdGkiOiJObmlxZlZEME9VZlBiWnkxIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.kr72QjV0fe4b-LjwjTnjrRkmpvlpLIgn8wK2jXCr8aU
 ```
 ## 2. Server Configuration
-![server](https://image.tmpbnine.store/resume-japan/png/server-config.png)
+![server](https://image.bnine.co.kr/resume-japan/png/server-config.png)
 ## 3. ERD for DB
-![server](https://image.tmpbnine.store/resume-japan/png/erd.png)
+![server](https://image.bnine.co.kr/resume-japan/png/erd.png)
 ## 4. API Routing
 ### Endpoint & SwaggerHub API Specification
 1. (GET) https://resume-api.bnine.site/api/v1/profile   
